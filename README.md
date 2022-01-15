@@ -4,4 +4,10 @@
 
     ng add @angular/material
 
-    
+    ng generate @angular/material:address-form paper
+    ng generate @angular/material:navigation nav
+    ng generate @angular/material:dashboard dashboard
+    ng generate @angular/material:table table
+    ng generate @angular/material:tree tree
+
+    ng generate @angular/cdk:drag-drop drag-drop
