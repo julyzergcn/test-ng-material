@@ -1,12 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+
+import { Editor, Toolbar } from 'ngx-editor';
 
 @Component({
   selector: 'app-paper',
   templateUrl: './paper.component.html',
   styleUrls: ['./paper.component.scss']
 })
-export class PaperComponent {
+export class PaperComponent implements OnDestroy {
+  editor: Editor;
+  html: string = '';
+  toolbar: Toolbar = [
+    ['bold', 'italic'],
+    ['underline', 'strike'],
+    ['code', 'blockquote'],
+    ['ordered_list', 'bullet_list'],
+    [{ heading: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] }],
+    ['link', 'image'],
+    ['text_color', 'background_color'],
+    ['align_left', 'align_center', 'align_right', 'align_justify'],
+  ];
+
   addressForm = this.fb.group({
     company: null,
     firstName: [null, Validators.required],
@@ -18,7 +33,8 @@ export class PaperComponent {
     postalCode: [null, Validators.compose([
       Validators.required, Validators.minLength(5), Validators.maxLength(5)])
     ],
-    shipping: ['free', Validators.required]
+    shipping: ['free', Validators.required],
+    editorContent: ['', Validators.required]
   });
 
   hasUnitNumber = false;
@@ -85,9 +101,14 @@ export class PaperComponent {
     {name: 'Wyoming', abbreviation: 'WY'}
   ];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) {
+    this.editor = new Editor();
+  }
 
   onSubmit(): void {
-    alert('Thanks!');
+  }
+
+  ngOnDestroy(): void {
+    this.editor.destroy();
   }
 }

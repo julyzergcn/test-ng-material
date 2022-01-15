@@ -92,6 +92,17 @@
           </mat-radio-group>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col">
+
+          <div class="NgxEditor__Wrapper">
+            <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"> </ngx-editor-menu>
+            <ngx-editor [editor]="editor" formControlName="editorContent"> </ngx-editor>
+          </div>
+
+        </div>
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" type="submit">Submit</button>
