@@ -32,6 +32,7 @@ import { DragDropComponent } from './drag-drop/drag-drop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgxEditorModule } from 'ngx-editor';
 import { AddressFormComponent } from './address-form/address-form.component';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -103,7 +104,9 @@ import { AddressFormComponent } from './address-form/address-form.component';
       },
     }),
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
