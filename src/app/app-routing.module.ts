@@ -32,6 +32,7 @@ const routes: Routes = [
     path: 'drag-drop',
     component: DragDropComponent
   },
+  { path: 'papers', loadChildren: () => import('./papers-module/papers-module.module').then(m => m.PapersModuleModule) },
 ];
 
 @NgModule({

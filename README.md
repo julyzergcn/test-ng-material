@@ -17,3 +17,5 @@
     npm install @datorama/akita-ng-router-store
 
     npm install @datorama/akita-ngdevtools --save-dev
+
+    ng g module papers-module --module=app --route=papers --routing
