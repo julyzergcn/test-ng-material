@@ -11,3 +11,9 @@
     ng generate @angular/material:tree tree
 
     ng generate @angular/cdk:drag-drop drag-drop
+
+    npm install @datorama/akita
+    npm install @datorama/akita-ng-entity-service
+    npm install @datorama/akita-ng-router-store
+
+    npm install @datorama/akita-ngdevtools --save-dev
