@@ -4,7 +4,7 @@
 
     ng add @angular/material
 
-    ng generate @angular/material:address-form paper
+    ng generate @angular/material:address-form address-form
     ng generate @angular/material:navigation nav
     ng generate @angular/material:dashboard dashboard
     ng generate @angular/material:table table

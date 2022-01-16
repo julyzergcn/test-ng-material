@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddressFormComponent } from './address-form/address-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
-import { PaperComponent } from './paper/paper.component';
 import { TableComponent } from './table/table.component';
 import { TreeComponent } from './tree/tree.component';
 
@@ -25,8 +25,8 @@ const routes: Routes = [
     component: TreeComponent
   },
   {
-    path: 'paper',
-    component: PaperComponent
+    path: 'address-form',
+    component: AddressFormComponent
   },
   {
     path: 'drag-drop',

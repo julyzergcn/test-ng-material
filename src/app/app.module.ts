@@ -13,7 +13,6 @@ import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
-import { PaperComponent } from './paper/paper.component';
 import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -32,16 +31,17 @@ import { MatTreeModule } from '@angular/material/tree';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgxEditorModule } from 'ngx-editor';
+import { AddressFormComponent } from './address-form/address-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaperComponent,
     NavComponent,
     DashboardComponent,
     TableComponent,
     TreeComponent,
-    DragDropComponent
+    DragDropComponent,
+    AddressFormComponent
   ],
   imports: [
     BrowserModule,

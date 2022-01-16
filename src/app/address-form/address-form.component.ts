@@ -4,11 +4,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Editor, Toolbar } from 'ngx-editor';
 
 @Component({
-  selector: 'app-paper',
-  templateUrl: './paper.component.html',
-  styleUrls: ['./paper.component.scss']
+  selector: 'app-address-form',
+  templateUrl: './address-form.component.html',
+  styleUrls: ['./address-form.component.scss']
 })
-export class PaperComponent implements OnDestroy {
+export class AddressFormComponent implements OnDestroy{
   editor: Editor;
   html: string = '';
   toolbar: Toolbar = [
@@ -34,7 +34,7 @@ export class PaperComponent implements OnDestroy {
       Validators.required, Validators.minLength(5), Validators.maxLength(5)])
     ],
     shipping: ['free', Validators.required],
-    editorContent: ['', Validators.required]
+    editorContent: ['', Validators.required],
   });
 
   hasUnitNumber = false;
@@ -105,10 +105,11 @@ export class PaperComponent implements OnDestroy {
     this.editor = new Editor();
   }
 
-  onSubmit(): void {
-  }
-
   ngOnDestroy(): void {
     this.editor.destroy();
+  }
+
+  onSubmit(): void {
+    alert('Thanks!');
   }
 }
