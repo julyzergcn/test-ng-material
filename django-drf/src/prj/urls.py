@@ -13,9 +13,9 @@ from djoser import views as djoser_views
 from paper import views as paper_views
 
 if settings.DEBUG:
-    router = routers.DefaultRouter()
+    router = routers.DefaultRouter(trailing_slash=False)
 else:
-    router = routers.SimpleRouter()
+    router = routers.SimpleRouter(trailing_slash=False)
 
 router.register("users", djoser_views.UserViewSet)
 router.register("papers", paper_views.PaperViewSet)
